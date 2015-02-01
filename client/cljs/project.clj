@@ -26,10 +26,10 @@
   :clean-targets ["resources/public/devcards/js/compiled/" "out/shout_client" "shout_client.js" "shout_client.min.js"]
   :cljsbuild {
     :builds [{:id "devcards"
-              :source-paths ["devcards_src" "src"]
+              :source-paths ["devcards/src" "src"]
               :compiler {
-                :output-to "resources/public/devcards/js/compiled/shout_devcards.js"
-                :output-dir "resources/public/devcards/js/compiled/out"
+                :output-to "devcards/resources/public/devcards/js/compiled/shout_devcards.js"
+                :output-dir "devcards/resources/public/devcards/js/compiled/out"
                 :optimizations :none
                 :source-map true}}
              {:id "dev"
@@ -46,4 +46,5 @@
                 :optimizations :advanced
                 :pretty-print false}}]}
 
-  :figwheel {:css-dirs ["resources/public/css" "css"]})
+  :resource-paths ["devcards/resources"]
+  :figwheel {:css-dirs ["devcards/resources/public/css" "css"]})
