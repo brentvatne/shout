@@ -10,6 +10,7 @@
                  [prismatic/om-tools "0.3.10"]
                  [ca.brentvatne/flux "0.1.1"]
                  [camel-snake-kebab "0.3.0"]
+                 [com.cognitect/transit-cljs "0.8.202"]
                  [sablono "0.3.1"]]
 
   :node-dependencies [[source-map-support "0.2.8"]]
