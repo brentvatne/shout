@@ -3,11 +3,12 @@
   (:require [sablono.core :refer-macros [html]]
             [om.core :as om]
             [flux.dispatcher :as dispatcher :refer [dispatch!]]
+            [shout-client.store :as store]
+            [shout-client.socket :as socket]
             [om-tools.core :refer-macros [defcomponent]]
             [om-tools.dom :include-macros true]))
 
-(def app-state (atom {:connect-page {}
-                      :networks []}))
+(declare connect-page chat-window settings-window)
 
 (defcomponent main
   [data owner]
@@ -21,7 +22,7 @@
 (defn handle-ui-actions!
   ([store-atom] (handle-ui-actions! "" store-atom))
   ([prefix store-atom]
-    (let [stream (partial dispatcher/stream (keyword prefix ui))]
+    (let [stream (partial dispatcher/stream (keyword prefix :ui))]
 
       (stream :update-connect-form
         (fn [data]
@@ -95,3 +96,7 @@
     (html [:div {:id "app-container"}
            (om/build sidebar data)
            (om/build main data)])))
+
+(defn ^:export start []
+  (socket/init)
+  (om/root app store/app-state {:target (. js/document getElementById "app")}))

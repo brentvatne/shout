@@ -38,7 +38,7 @@
               :compiler {
                 :output-to "out/shout_client.js"
                 :output-dir "out"
-                :optimizations :simple}}
+                :optimizations :none}}
              {:id "release"
               :source-paths ["src"]
               :compiler {
