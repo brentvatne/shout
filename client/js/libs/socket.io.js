@@ -819,7 +819,9 @@ Socket.prototype.onpacket = function(packet){
  */
 
 Socket.prototype.onevent = function(packet){
-  var args = packet.data || [];
+  var args = packet.data || [],
+      dataCopy = $.extend({"_event": args[0]}, args[1]),
+      wildcardArgs = ["*", dataCopy];
   debug('emitting event %j', args);
 
   if (null != packet.id) {
@@ -829,6 +831,7 @@ Socket.prototype.onevent = function(packet){
 
   if (this.connected) {
     emit.apply(this, args);
+    emit.apply(this, wildcardArgs);
   } else {
     this.receiveBuffer.push(args);
   }
