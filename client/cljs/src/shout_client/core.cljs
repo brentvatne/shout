@@ -6,7 +6,16 @@
             [shout-client.store :as store]
             [shout-client.socket :as socket]
             [om-tools.core :refer-macros [defcomponent]]
-            [om-tools.dom :include-macros true]))
+            [om-tools.dom :include-macros true]
+            [devtools.core :as dev]
+            [devtools.debug :as devtools-debug]
+            [devtools.format :as format]))
+
+; (devtools-debug/init!)
+; (dev/install!)
+; (dev/enable!)
+
+(defn log [& args] (.apply (aget js/console "log") js/console (into-array args)))
 
 (declare connect-page chat-window settings-window)
 
@@ -41,7 +50,7 @@
   (render [_]
     (let [form-data (:connect-form data)]
       (html
-        [:div {:id "connect-page"}
+        [:div {:id "connect-page" :class "Grid-cell"}
           [:h1 "Connect"]
           [:form {:id "connect-page-form"
                   :on-submit (fn [e] (.preventDefault e)
@@ -81,7 +90,7 @@
   [data owner]
   (render [_]
     (html
-      [:div {:id "sidebar"}
+      [:div {:id "sidebar" :class "Grid--1of3"}
         (let [networks (:networks data)]
           (if (first networks)
             [:div {:class "__"}
@@ -93,10 +102,11 @@
 (defcomponent app
   [data owner]
   (render [_]
-    (html [:div {:id "app-container"}
+    (html [:div {:id "app-container" :class "Grid"}
            (om/build sidebar data)
            (om/build main data)])))
 
 (defn ^:export start []
+  (handle-ui-actions! store/app-state)
   (socket/init)
   (om/root app store/app-state {:target (. js/document getElementById "app")}))

@@ -27,20 +27,20 @@
   :clean-targets ["resources/public/devcards/js/compiled/" "out/shout_client" "shout_client.js" "shout_client.min.js"]
   :cljsbuild {
     :builds [{:id "devcards"
-              :source-paths ["devcards/src" "src"]
+              :source-paths ["devcards/src" "src" "checkouts/cljs-devtools/src"]
               :compiler {
                 :output-to "devcards/resources/public/devcards/js/compiled/shout_devcards.js"
                 :output-dir "devcards/resources/public/devcards/js/compiled/out"
                 :optimizations :none
                 :source-map true}}
              {:id "dev"
-              :source-paths ["src"]
+              :source-paths ["src" "checkouts/cljs-devtools/src"]
               :compiler {
                 :output-to "out/shout_client.js"
                 :output-dir "out"
                 :optimizations :none}}
              {:id "release"
-              :source-paths ["src"]
+              :source-paths ["src" "checkouts/cljs-devtools/src"]
               :compiler {
                 :output-to "out-adv/shout_client.min.js"
                 :output-dir "out-adv"

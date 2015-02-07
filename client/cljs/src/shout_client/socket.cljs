@@ -1,24 +1,26 @@
 (ns shout-client.socket
   (:require-macros [cljs.core.async.macros :refer [go]])
-  (:require [cljs.core.async :as async]))
+  (:require [cljs.core.async :as async]
+            [clojure.walk :refer [keywordize-keys]]
+            [flux.dispatcher :as dispatcher :refer [dispatch!]]))
 
 (def events
-  ["msg"
-  "error"
-  "join"
-  "nick"
-  "network"])
+  ["msg" "error" "join" "nick" "network"])
+
+(defn join [socket {:keys [network-id channel]}]
+  (.emit socket "input" #js {:target network-id :text (str "/join " channel)}))
 
 (defn init []
   (let [socket (js/io)]
-    (.on socket "init" (fn [data] (.log js/console data)))
-    (.on socket "*" (fn [data] (.log js/console data)))
-    ; (doseq [event events]
-    ;   (.on socket event (fn [data] (.log js/console event) (.log js/console data))))
-    ; (.emit socket "quit")
+    (.on socket "*"
+       (fn [data] (let [event (keyword (.-_event data))]
+        (dispatch! event (keywordize-keys (js->clj data))))))
+
     (.emit socket "conn" #js {:nick "notbrent-cljs"
                               :username "notbrent-cljs"
                               :realname "brent vatne"
-                              :channels "#clojurescript, #clojure"})
-    (go (<! (async/timeout 3000))
-        (.emit socket "input" #js {:target 8 :text "/join #test"}))))
+                              :channels "#test"})
+
+    (.on socket "network" (fn [data]
+      (go (<! (async/timeout 1000))
+          (join socket {:network-id (.. data -network -id) :channel "#test"}))))))

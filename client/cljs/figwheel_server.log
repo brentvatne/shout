@@ -1,0 +1,98 @@
+Figwheel: focusing on build-ids (devcards)
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.224 seconds.[0m
+notifying browser that file changed:  devcards/resources/public/devcards/js/compiled/shout_devcards.js
+notifying browser that file changed:  devcards/resources/public/devcards/js/compiled/out/goog/deps.js
+notifying browser that file changed:  /shout_client/store.js
+notifying browser that file changed:  /shout_client/socket.js
+notifying browser that file changed:  /shout_client/core.js
+notifying browser that file changed:  /shout_devcards/core.js
+sending changed CSS file: devcards/resources/public/css/test_devcards-style.css
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.472 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.41 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js
+sending changed CSS file: devcards/resources/public/css/test_devcards-style.css
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+WARNING: Use of undeclared Var shout-devcards.core/unmount-react at line 47 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/render-to at line 44 devcards/src/shout-devcards/core.cljs
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.511 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+WARNING: Bad method signature in protocol implementation, IMount does not declare method called mount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IUnMount does not declare method called unmount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IConfig does not declare method called -options at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IConfig at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IConfig is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IUnMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IUnMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/box-data-atom at line 51 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unmount-react at line 47 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unbox-data-atom at line 44 devcards/src/shout-devcards/core.cljs
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.678 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.409 seconds.[0m
+notifying browser that file changed:  /shout_client/socket.js
+notifying browser that file changed:  /shout_client/core.js
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.414 seconds.[0m
+notifying browser that file changed:  /shout_client/socket.js
+notifying browser that file changed:  /shout_client/core.js
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.337 seconds.[0m
+notifying browser that file changed:  /shout_client/socket.js
+notifying browser that file changed:  /shout_client/core.js
+notifying browser that file changed:  /shout_devcards/core.js
+sending changed CSS file: devcards/resources/public/css/test_devcards-style.css
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+WARNING: Bad method signature in protocol implementation, IMount does not declare method called mount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IUnMount does not declare method called unmount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IConfig does not declare method called -options at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IConfig at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IConfig is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IUnMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IUnMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/box-data-atom at line 51 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unmount-react at line 47 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unbox-data-atom at line 44 devcards/src/shout-devcards/core.cljs
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.675 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+WARNING: Bad method signature in protocol implementation, IMount does not declare method called mount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IUnMount does not declare method called unmount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IConfig does not declare method called -options at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IConfig at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IConfig is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IUnMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IUnMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/box-data-atom at line 52 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unmount-react at line 48 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unbox-data-atom at line 45 devcards/src/shout-devcards/core.cljs
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.518 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js
+[0mCompiling "devcards/resources/public/devcards/js/compiled/shout_devcards.js" from ["devcards/src" "src"]...
+WARNING: Bad method signature in protocol implementation, IMount does not declare method called mount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IUnMount does not declare method called unmount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Bad method signature in protocol implementation, IConfig does not declare method called -options at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IConfig at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IConfig is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IUnMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IUnMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/IMount at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Symbol IMount is not a protocol at line 40 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/box-data-atom at line 52 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unmount-react at line 48 devcards/src/shout-devcards/core.cljs
+WARNING: Use of undeclared Var shout-devcards.core/unbox-data-atom at line 45 devcards/src/shout-devcards/core.cljs
+[32mSuccessfully compiled "devcards/resources/public/devcards/js/compiled/shout_devcards.js" in 0.496 seconds.[0m
+notifying browser that file changed:  /shout_devcards/core.js

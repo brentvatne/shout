@@ -2,6 +2,7 @@
   (:require-macros [devcards.core :refer [defcard is are= are-not=]])
   (:require [shout-client.core :refer [app connect-page sidebar handle-ui-actions!]]
             [devcards.core :as dc :include-macros true]
+            [shout-devcards.cards :refer [om-root-card]]
             [cognitect.transit :as t]
             [om-tools.core :refer-macros [defcomponent]]
             [om.core :as om :include-macros true]
@@ -31,19 +32,28 @@
 
 (defcard card-sidebar-with-networks
   (dc/om-root-card sidebar {:networks [{:name "Freenode"
-                                        :channels [{:name "#reactjs" :unread 80}
-                                                   {:name "#clojurescript" :unread 0}]}
+                                       :channels [{:name "#reactjs" :unread 80}
+                                                  {:name "#clojurescript" :unread 0}]}
                                        {:name "Other"
                                         :channels [{:name "#somechan" :unread 5}
                                                    {:name "#otherchan" :unread 10}]}]}))
+
+(defcomponent wrapper
+  [data owner]
+  (render [_]
+    (html [:div {:class "Grid"}
+            (om/build (:component data) (dissoc data :component))])))
 
 (defonce not-signed-in-state
   (let [state (atom {:networks [] :connect-form {:network-name "Freenode!"}})]
     (handle-ui-actions! "not-signed-in" state)
     state))
 
+(defn om-card [component state]
+  (dc/om-root-card wrapper (merge @state {:component component})))
+
 (defcard app-not-signed-in
-  (dc/om-root-card app not-signed-in-state))
+  (om-card app not-signed-in-state))
 
 (defcard app-not-signed-in-state
   (dc/om-root-card state-info not-signed-in-state))
